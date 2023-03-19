@@ -1,49 +1,42 @@
 'use strict';
 
-export function pintarProductos(productos) {
-  productos.forEach(function (producto) {
-    //creando columnas para alojar los productos
-    let columna = document.createElement('div');
-    columna.classList.add('col');
+export function productShowcase(products) {
+  products.forEach(function (product) {
+    let column = document.createElement('div');
+    column.classList.add('col');
 
-    //crear una tarjeta para almacenar la info del producto
-    let tarjeta = document.createElement('div');
-    tarjeta.classList.add('card', 'h-100', 'shadow');
+    let card = document.createElement('div');
+    card.classList.add('card', 'h-100', 'shadow');
 
-    //crear una imagen
-    let imagen = document.createElement('img');
-    imagen.classList.add('img-fluid', 'w-100');
-    imagen.src = producto.fotos[0];
+    let image = document.createElement('img');
+    image.classList.add('img-fluid', 'w-100');
+    image.src = product.cover[0];
 
-    //crear un titulo
     let title = document.createElement('h3');
     title.classList.add('text-center');
-    title.textContent = producto.title;
+    title.textContent = product.title;
 
-    //crear un precio
-    let precio = document.createElement('h5');
-    precio.classList.add('text-center', 'text-success', 'fw-bold');
-    precio.textContent = 'USD ' + producto.precio;
+    let price = document.createElement('h5');
+    price.classList.add('text-center', 'text-success', 'fw-bold');
+    price.textContent = 'USD ' + product.price;
 
-    let desc = document.createElement('p');
-    precio.classList.add('text-center', 'fw-bold', 'd-none');
-    precio.textContent = producto.descripcion;
+    let description = document.createElement('p');
+    description.classList.add('text-center', 'fw-bold', 'd-none');
+    description.textContent = product.description;
 
-    //Detectando evento
-    tarjeta.addEventListener('mouseover', function () {
-      imagen.src = producto.fotos[1];
+    card.addEventListener('mouseover', function () {
+      image.src = product.cover[1];
     });
 
-    tarjeta.addEventListener('mouseleave', function () {
-      imagen.src = producto.fotos[0];
+    card.addEventListener('mouseleave', function () {
+      image.src = product.cover[0];
     });
 
-    //padres e hijos
-    tarjeta.appendChild(imagen);
-    tarjeta.appendChild(title);
-    tarjeta.appendChild(precio);
-    tarjeta.appendChild(desc);
-    columna.appendChild(tarjeta);
-    fila.appendChild(columna);
+    card.appendChild(image);
+    card.appendChild(title);
+    card.appendChild(price);
+    card.appendChild(description);
+    column.appendChild(card);
+    fila.appendChild(column);
   });
 }

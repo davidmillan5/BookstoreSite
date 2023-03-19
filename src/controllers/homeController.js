@@ -1,12 +1,12 @@
 'use strict';
 import { products } from '../helpers/dataBase.js';
-import { pintarProductos } from '../helpers/productShowcase.js';
+import { productShowcase } from '../helpers/productShowcase.js';
 
 //llamando a la fila
 let fila = document.getElementById('fila');
 
 //Pintar los productos de la tienda
-pintarProductos(products);
+productShowcase(products);
 
 //Escuchando clic en la fila contenedora de productos
 fila.addEventListener('click', function (evento) {
