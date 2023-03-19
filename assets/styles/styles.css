@@ -1,5 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
+  text-align: justify;
 }
 
 .no-padding {
@@ -10,4 +11,8 @@
 #first-paragraph {
   margin-top: 100px;
   text-align: justify;
+}
+
+.img-fluid {
+  margin: 0 auto;
 }
