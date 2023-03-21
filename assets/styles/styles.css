@@ -16,3 +16,7 @@
 .img-fluid {
   margin: 0 auto;
 }
+
+#cart {
+  margin-right: 100px;
+}

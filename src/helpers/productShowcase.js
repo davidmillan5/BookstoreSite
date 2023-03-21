@@ -37,6 +37,6 @@ export function productShowcase(products) {
     card.appendChild(price);
     card.appendChild(description);
     column.appendChild(card);
-    fila.appendChild(column);
+    booksrow.appendChild(column);
   });
 }

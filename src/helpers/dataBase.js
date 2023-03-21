@@ -68,5 +68,40 @@ export let products = Array(
     ],
     price: 63.03,
     rate: 4.0,
+  },
+  {
+    title:
+      'Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People',
+    description:
+      'Grokking Algorithms is a fully illustrated, friendly guide that teaches you how to apply common algorithms to the practical problems you face every day as a programmer. ',
+    cover: [
+      'https://m.media-amazon.com/images/P/1617292230.01._SCLZZZZZZZ_SX500_.jpg',
+      'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/816rnJwrvgL.jpg',
+    ],
+    price: 35.99,
+    rate: 4.1,
+  },
+  {
+    title: 'Secrets of the JavaScript Ninja',
+    description:
+      'More than ever, the web is a universal platform for all types of applications, and JavaScript is the language of the web. If you are serious about web development, it is not enough to be a decent JavaScript coder.',
+    cover: [
+      'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71OcrNWJv3L.jpg',
+      'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81LiNL7uMQL.jpg',
+    ],
+    price: 44.99,
+    rate: 4.5,
+  },
+  {
+    title:
+      'Learning Angular: A no-nonsense guide to building web applications with Angular 15',
+    description:
+      'Build your first production-grade web applications from scratch with Angular with the help of expert guidance and step-by-step explanations.',
+    cover: [
+      'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61C1QHUuWJL.jpg',
+      'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51MjW4YKQrL.jpg',
+    ],
+    price: 37.79,
+    rate: 4,
   }
 );
