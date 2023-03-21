@@ -11,11 +11,11 @@ const quantity = document.getElementById('productQuantity').value;
 const exchangeRate = 4500;
 console.log(quantity);
 
-const pesosConverterFunction = (price_id) => {
+const pesosConverterFunction = (price_id, quantity) => {
   const floatPrice = parseFloat(price_id.textContent);
   const floatQuantity = parseFloat(quantity);
   const pesosValue = floatPrice * exchangeRate * floatQuantity;
   return `$ ${pesosValue}`;
 };
 
-valueInCOP.innerText = pesosConverterFunction(price_id);
+valueInCOP.innerText = pesosConverterFunction(price_id, quantity);
