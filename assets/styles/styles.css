@@ -20,3 +20,36 @@
 #cart {
   margin-right: 100px;
 }
+
+#visa_img {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+#mastercard_img {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+#americanexpress_img {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+#amazonpay_img {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+#paypal_img {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
