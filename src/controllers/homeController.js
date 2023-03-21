@@ -15,6 +15,7 @@ row.addEventListener('click', function (event) {
 
   selectionatedData.cover = card.querySelector('img').src;
   selectionatedData.title = card.querySelector('h3').textContent;
+  selectionatedData.description = card.querySelector('p').textContent;
   selectionatedData.price = card.querySelector('h5').textContent;
 
   //usaremos la memoria del pc para guardar esta info

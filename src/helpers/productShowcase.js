@@ -18,7 +18,7 @@ export function productShowcase(products) {
 
     let price = document.createElement('h5');
     price.classList.add('text-center', 'text-success', 'fw-bold');
-    price.textContent = 'USD ' + product.price;
+    price.textContent = product.price;
 
     let description = document.createElement('p');
     description.classList.add('text-center', 'fw-bold', 'd-none');

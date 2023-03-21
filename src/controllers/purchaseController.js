@@ -9,6 +9,9 @@ pic.src = infoProduct.cover;
 let title = document.getElementById('title');
 title.textContent = infoProduct.title;
 
+let description = document.getElementById('description');
+description.textContent = infoProduct.description;
+
 let price = document.getElementById('price');
 price.textContent = infoProduct.price;
 

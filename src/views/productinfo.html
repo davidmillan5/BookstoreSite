@@ -94,7 +94,8 @@
           </div>
           <div class="col-4 border border-start align-self-center">
             <h3 class="fw-bold my-5 text-md-center" id="title">Product Title</h3>
-            <h2 class="text-success my-5 text-danger text-md-center" id="price">USD 40</h2>
+            <h2 class="text-success my-5 text-danger text-md-center" id="price"></h2>
+            <p class="text-md-start mb-4" id="description"></p>
             <img
               src="https://cdn.worldvectorlogo.com/logos/visa.svg"
               alt="visa"
@@ -137,16 +138,26 @@
             <input type="number" class="form-control" placeholder="1" />
 
             <hr />
-            <h5 class="mt-2">Price in COP</h5>
-            <p id="ValueInCOP"></p>
-            <button
-              type="button"
-              class="btn btn-warning my-5 btn-lg"
-              id="btnAddProduct"
-            >
-              <i class="bi bi-cart-fill text-center align"></i> Add to Cart
-            </button>
-            <button type="button" class="btn btn-success btn-lg my-5 text-center"><i class="bi bi-cash-coin"></i> See in COP</button>
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <button type="button"  class="btn btn-success btn-lg text-center" id="pesosConverter"><i class="bi bi-cash-coin"></i> See in COP</button>
+                </div>
+                <div class="col-5">
+                  <p id="ValueInCOP"></p>     
+                </div>
+              </div>
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-warning my-2 btn-lg"
+                  id="btnAddProduct"
+                >
+                  <i class="bi bi-cart-fill text-center align"></i> Add to Cart
+                </button>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -169,6 +180,7 @@
     <!-- Controller Beginning --->
 
     <script src="../controllers/purchaseController.js" type="module"></script>
+    <script src="../controllers/currencyConverter.js" type="module"></script>
 
     <!--- End Controller --->
 
