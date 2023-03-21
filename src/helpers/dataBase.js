@@ -43,7 +43,7 @@ export let products = Array(
       'https://m.media-amazon.com/images/P/0596517742.01._SCLZZZZZZZ_SX500_.jpg',
       'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81-IfLqwLIL.jpg',
     ],
-    price: 13.69,
+    price: 31.69,
     rate: 4.8,
   },
   {

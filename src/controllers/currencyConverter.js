@@ -7,11 +7,9 @@ const price_id = document.getElementById('price');
 const valueInCOP = document.getElementById('valueInCOP');
 
 const pesosConverterFunction = (price_id) => {
-  const floatPrice = parseFloat(price_id);
+  const floatPrice = parseFloat(price_id.textContent);
   const pesosValue = floatPrice * 4500;
-  console.log(pesosValue);
+  return pesosValue;
 };
 
-pesosConverter.addEventListener('click', pesosConverterFunction(price_id));
-
-console.log(pesosConverterFunction(price_id));
+valueInCOP.innerText = pesosConverterFunction(price_id);
