@@ -59,7 +59,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav container-fluid">
-              <a class="nav-link active text-light" aria-current="page" href="#"
+              <a class="nav-link active text-light" aria-current="page" href="../../index.html"
                 >Home</a
               >
               <a class="nav-link text-light" href="/index.html#about">About</a>
@@ -86,9 +86,89 @@
       </nav>
     </header>
     <main>
-      <!-- Main Banner --->
-      
+      <div class="container-fluid my-5">
+        <div class="row mt-5 justify-content-center">
+          <div class="col-7">
+            <img src="" alt="book cover" class="img-fluid w-50 h-70 ms-5" id="picture" />
+          </div>
+          <div class="col-4 border border-start align-self-center">
+            <h3 class="fw-bold my-4 text-md-center" id="title">Product Title</h3>
+            <h2 class="text-success my-3 text-danger text-md-center" id="price"></h2>
+            <p class="text-md-start my-4" id="description"></p>
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/visa.svg"
+              alt="visa"
+              class="img-fluid"
+              id="visa_img"
+            />
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/mastercard-2.svg"
+              alt="mastercard"
+              class="img-fluid"
+              id="mastercard_img"
+            />
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/american-express.svg"
+              alt="American Express"
+              class="img-fluid"
+              id="americanexpress_img"
+            />
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/amazon-pay-1.svg"
+              alt="Amazon Pay"
+              class="img-fluid"
+              id="amazonpay_img"
+            />
+            
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/paypal-3.svg"
+              alt="PayPal"
+              class="img-fluid"
+              id="paypal_img"
+            />
+            
+            
+            <h4 class="my-2"><i class="bi bi-truck fs-1"></i> Shipping to Colombia </h4>
+            
+            <h4><i class="bi bi-arrow-counterclockwise fs-1"></i> Free Refunds in 30 days</h4>
+            
+
+            
+            <div class="container a-column a-span a-text-left">
+              <div class="row">
+                <div class="col">
+                  <label for="quantity" class="text-center fw-4 fs-3 form-label">Quantity:</label>
+                  <button class="btn btn-dark text-light btn-md text-center" id="testBtn">0</button>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <button type="button"  class="btn btn-success btn-lg text-center" id="pesosConverter"><i class="bi bi-cash-coin"></i> See in COP</button>
+                </div>
+                <div class="col-5">
+                  <p id="valueInCOP" class="text-center mt-2 fs-4"></p>     
+                </div>
+              </div>
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-warning my-2 btn-lg"
+                  id="btnAddProduct"
+                >
+                  <i class="bi bi-cart-fill text-center align"></i> Add to Cart
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    
     <footer class="container-fluid bg-dark">
       <div class="row">
         <div class="col">
@@ -99,6 +179,15 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- Beginning With Controllers -->
+
+    <script src="../controllers/checkoutCartControllers.js" type="module"></script>
+
+    <!--- End With Controllers --->
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
