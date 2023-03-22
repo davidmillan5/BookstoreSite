@@ -3,10 +3,10 @@
 let infoProduct = JSON.parse(localStorage.getItem('product'));
 console.log(infoProduct);
 
-let pic = document.getElementById('picture');
-pic.src = infoProduct.cover;
+// let pic = document.getElementById('picture');
+// pic.src = infoProduct.cover;
 
-let title = document.getElementById('title');
+// let title = document.getElementById('title');
 title.textContent = infoProduct.title;
 
 let description = document.getElementById('description');
@@ -30,7 +30,16 @@ if (cartInfo != null) {
 
 let btnAddProduct = document.getElementById('btnAddProduct');
 btnAddProduct.addEventListener('click', () => {
-  cart.push(infoProduct);
+  if (counter > 0) {
+    cart.push(infoProduct);
+    pill.textContent = counter;
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+});
+
+let btnClearCart = document.getElementById('btnClearCart');
+btnClearCart.addEventListener('click', () => {
+  cart.pop();
   pill.textContent = cart.length;
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.removeItem('cart', JSON.stringify(cart));
 });

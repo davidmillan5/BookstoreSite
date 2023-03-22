@@ -36,3 +36,5 @@ pesosConverter.addEventListener('click', (event) => {
 });
 
 //console.log(pressBtn());
+
+// export * from 'currencyConverter';

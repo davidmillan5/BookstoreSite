@@ -1,5 +1,7 @@
 'use strict';
 
+// import 'currencyConverter';
+
 let infoProduct = JSON.parse(localStorage.getItem('product'));
 console.log(infoProduct);
 
@@ -21,6 +23,41 @@ let cart = [];
 
 let pill = document.getElementById('pill');
 
+const pesosConverter = document.getElementById('pesosConverter');
+
+const price_id = document.getElementById('price');
+
+const valueInCOP = document.getElementById('valueInCOP');
+
+// const quantity = document.getElementById('productQuantity').value;
+
+const testBtn = document.getElementById('testBtn');
+
+const exchangeRate = 4500;
+
+let counter = 0;
+
+const pressBtn = () => {
+  return counter++;
+};
+
+testBtn.addEventListener('click', (event) => {
+  testBtn.innerText = pressBtn();
+});
+
+const pesosConverterFunction = (price_id, counter) => {
+  const floatPrice = parseFloat(price_id.textContent);
+  //const floatQuantity = parseFloat(quantity);
+  const pesosValue = floatPrice * exchangeRate * counter;
+  return `$ ${pesosValue}`;
+};
+
+console.log(pesosConverterFunction(price_id, counter));
+
+pesosConverter.addEventListener('click', (event) => {
+  valueInCOP.innerText = pesosConverterFunction(price_id, counter);
+});
+
 if (cartInfo != null) {
   cart = cartInfo;
   pill.textContent = cart.length;
@@ -30,7 +67,16 @@ if (cartInfo != null) {
 
 let btnAddProduct = document.getElementById('btnAddProduct');
 btnAddProduct.addEventListener('click', () => {
-  cart.push(infoProduct);
+  if (counter > 0) {
+    cart.push(infoProduct);
+    pill.textContent = counter;
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+});
+
+let btnClearCart = document.getElementById('btnClearCart');
+btnClearCart.addEventListener('click', () => {
+  cart.pop();
   pill.textContent = cart.length;
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.removeItem('cart', JSON.stringify(cart));
 });
