@@ -1,7 +1,5 @@
 'use strict';
 
-// import 'currencyConverter';
-
 let infoProduct = JSON.parse(localStorage.getItem('product'));
 console.log(infoProduct);
 
@@ -19,10 +17,6 @@ price.textContent = infoProduct.price;
 
 let cartInfo = JSON.parse(localStorage.getItem('cart'));
 
-let cart = [];
-
-let pill = document.getElementById('pill');
-
 const pesosConverter = document.getElementById('pesosConverter');
 
 const price_id = document.getElementById('price');
@@ -33,30 +27,41 @@ const valueInCOP = document.getElementById('valueInCOP');
 
 const testBtn = document.getElementById('testBtn');
 
+const minusBtn = document.getElementById('minusBtn');
+
+const plusBtn = document.getElementById('plusBtn');
+
 const exchangeRate = 4500;
 
-let counter = 0;
-
-const pressBtn = () => {
+const plusBtnFc = () => {
   return counter++;
 };
 
-testBtn.addEventListener('click', (event) => {
-  testBtn.innerText = pressBtn();
-});
-
-const pesosConverterFunction = (price_id, counter) => {
-  const floatPrice = parseFloat(price_id.textContent);
-  //const floatQuantity = parseFloat(quantity);
-  const pesosValue = floatPrice * exchangeRate * counter;
-  return `$ ${pesosValue}`;
+const minusBtnFc = () => {
+  return counter--;
 };
 
-console.log(pesosConverterFunction(price_id, counter));
-
-pesosConverter.addEventListener('click', (event) => {
-  valueInCOP.innerText = pesosConverterFunction(price_id, counter);
+plusBtn.addEventListener('click', (event) => {
+  if (counter >= 0) {
+    testBtn.innerText = plusBtnFc();
+  } else {
+    Swal.fire('Something Wrong Happened Try To refresh the Page');
+  }
 });
+
+minusBtn.addEventListener('click', (event) => {
+  if (counter > 0) {
+    testBtn.innerText = minusBtnFc();
+  } else {
+    Swal.fire('Something Wrong Happened Try To refresh the Page');
+  }
+});
+
+let counter = 0;
+
+let cart = [];
+
+let pill = document.getElementById('pill');
 
 if (cartInfo != null) {
   cart = cartInfo;
@@ -69,8 +74,10 @@ let btnAddProduct = document.getElementById('btnAddProduct');
 btnAddProduct.addEventListener('click', () => {
   if (counter > 0) {
     cart.push(infoProduct);
-    pill.textContent = counter;
+    pill.textContent = cart.length;
     localStorage.setItem('cart', JSON.stringify(cart));
+  } else {
+    Swal.fire('Something Wrong Happened Try To refresh the Page');
   }
 });
 

@@ -12,5 +12,8 @@
     "CSS"
   ],
   "author": "Cesar David Millan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.7.3"
+  }
 }

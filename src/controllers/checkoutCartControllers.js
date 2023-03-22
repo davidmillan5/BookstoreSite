@@ -34,6 +34,8 @@ btnAddProduct.addEventListener('click', () => {
     cart.push(infoProduct);
     pill.textContent = counter;
     localStorage.setItem('cart', JSON.stringify(cart));
+  } else {
+    Swal.fire('Something Wrong Happened Try To refresh the Page');
   }
 });
 
