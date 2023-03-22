@@ -53,10 +53,21 @@ const pesosConverterFunction = (price_id, counter) => {
   }
 };
 
+const subtotalFunc = (price_id, counter) => {
+  if (counter > 0) {
+    const floatPrice = parseFloat(price_id.textContent);
+    const subtotalAmount = floatPrice * counter;
+    return `$ ${subtotalAmount}`;
+  } else {
+    Swal.fire('Something Wrong Happened Try To refresh the Page');
+  }
+};
+
 console.log(pesosConverterFunction(price_id, counter));
 
 pesosConverter.addEventListener('click', (event) => {
   valueInCOP.innerText = pesosConverterFunction(price_id, counter);
+  subTotal.innerText = subtotalFunc(price_id, counter);
 });
 
 //console.log(pressBtn());

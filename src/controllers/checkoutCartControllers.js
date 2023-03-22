@@ -17,7 +17,13 @@ price.textContent = infoProduct.price;
 
 let cartInfo = JSON.parse(localStorage.getItem('cart'));
 
+let subTotal = document.getElementById('subTotal');
+
+let saveForLater = document.getElementById('saveForLater');
+
 let cart = [];
+
+// let counter = 0;
 
 let pill = document.getElementById('pill');
 
@@ -27,6 +33,14 @@ if (cartInfo != null) {
 } else {
   cart = [];
 }
+
+const saveForLaterMessage = () => {
+  Swal.fire('Saved Product');
+};
+
+saveForLater.addEventListener('click', (event) => {
+  saveForLaterMessage();
+});
 
 let btnAddProduct = document.getElementById('btnAddProduct');
 btnAddProduct.addEventListener('click', () => {
