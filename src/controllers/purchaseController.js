@@ -33,6 +33,8 @@ const plusBtn = document.getElementById('plusBtn');
 
 const exchangeRate = 4500;
 
+let counter = 0;
+
 const plusBtnFc = () => {
   return counter++;
 };
@@ -57,8 +59,6 @@ minusBtn.addEventListener('click', (event) => {
   }
 });
 
-let counter = 0;
-
 let cart = [];
 
 let pill = document.getElementById('pill');
@@ -82,8 +82,12 @@ btnAddProduct.addEventListener('click', () => {
 });
 
 let btnClearCart = document.getElementById('btnClearCart');
-btnClearCart.addEventListener('click', () => {
-  cart.pop();
-  pill.textContent = cart.length;
-  localStorage.removeItem('cart', JSON.stringify(cart));
-});
+if (cart.lenght === 0) {
+  Swal.fire('Something Wrong Happened Try To refresh the Page');
+} else {
+  btnClearCart.addEventListener('click', () => {
+    cart.pop();
+    pill.textContent = cart.length;
+    localStorage.removeItem('cart', JSON.stringify(cart));
+  });
+}
